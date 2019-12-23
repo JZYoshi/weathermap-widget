@@ -1,1 +1,6 @@
-<p>category-list works!</p>
+
+<div *ngFor="let category of categories">
+    <button (click)="categoryChosen.emit(category)" >
+        {{ category }}
+    </button>
+</div>

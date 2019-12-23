@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataFactoryService } from '../data-factory.service';
 
 @Component({
   selector: 'app-information-block',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InformationBlockComponent implements OnInit {
 
-  constructor() { }
+  weatherData = {};
+  category = '';
+  infoTypes = [];
+
+  constructor(private dataFactory: DataFactoryService) {
+    this.dataFactory.weatherDataSubject.subscribe({
+      next: (data) => {
+        this.weatherData = data;
+      },
+      error: (e) => {
+        console.log(e);
+      }
+    });
+  }
 
   ngOnInit() {
   }
 
+  changeDisplayCategory(category: string) {
+    this.category = category;
+    this.infoTypes = Object.keys(this.weatherData[category]);
+  }
 }

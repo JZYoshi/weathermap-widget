@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { moduleTypeMap } from './moduleTypeMap';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataFactoryService {
 
-  public weatherData = {};
+  public weatherDataSubject = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -22,11 +23,14 @@ export class DataFactoryService {
     }
     const options = {
       headers: {
-        Authorization: 'Bearer ' + '5dfbd4b067368a000b6e32d6|812f89b70f523b0a97d0b4bb728ec7a0',
+        Authorization: 'Bearer ' + '5dfbd4b067368a000b6e32d6|d0340ec018d829947f509916969c15a6',
       }
     };
     this.http.get<any>('https://api.netatmo.com/api/getpublicdata' + query, options)
-    .subscribe((data) => {this.weatherData = this.processWeatherData(data.body); });
+    .subscribe((data) => {
+      const refinedWeatherData = this.processWeatherData(data.body);
+      this.weatherDataSubject.next(refinedWeatherData);
+    });
   }
 
   processWeatherData(rawData) {
@@ -40,7 +44,7 @@ export class DataFactoryService {
         }
         return refinedData;
       }
-    })
+    });
     return refinedData;
   }
 }

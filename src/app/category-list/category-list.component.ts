@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataFactoryService } from '../data-factory.service';
 
 @Component({
@@ -8,7 +8,19 @@ import { DataFactoryService } from '../data-factory.service';
 })
 export class CategoryListComponent implements OnInit {
 
-  constructor(dataFactory: DataFactoryService) { }
+  categories: string[] = [];
+  @Output() categoryChosen: EventEmitter<string> = new EventEmitter();
+
+  constructor(private dataFactory: DataFactoryService) {
+    this.dataFactory.weatherDataSubject.subscribe({
+      next: (data) => {
+        this.categories = Object.keys(data);
+      },
+      error: () => {
+        this.categories = [];
+      }
+    });
+  }
 
   ngOnInit() {
   }

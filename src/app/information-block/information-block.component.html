@@ -1,1 +1,16 @@
-<p>information-block works!</p>
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let infoType of infoTypes" scope="col">
+                {{ infoType }}
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="!!weatherData[category]">
+        <tr>
+            <td *ngFor="let infoType of infoTypes">
+                {{ weatherData[category][infoType] }}
+            </td>
+        </tr>
+    </tbody>
+</table>

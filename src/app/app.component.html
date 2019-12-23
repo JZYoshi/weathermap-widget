@@ -1,2 +1,19 @@
-<app-city-list></app-city-list>
-<app-weather-display-panel></app-weather-display-panel>
+<mat-grid-list cols="6" rowHeight="1:1">
+    <mat-grid-tile
+        [colspan]="6"
+        [rowspan]="1"
+        [style.background]="'lightblue'">
+        <p>Welcome to Weathermap Widget</p>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="2"
+        [style.background]="'lightpink'">
+        <app-city-list></app-city-list>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="5"
+        [rowspan]="2">
+        <app-weather-display-panel></app-weather-display-panel>
+    </mat-grid-tile>
+</mat-grid-list>

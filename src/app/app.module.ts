@@ -6,6 +6,10 @@ import { CityListComponent } from './city-list/city-list.component';
 import { WeatherDisplayPanelComponent } from './weather-display-panel/weather-display-panel.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { InformationBlockComponent } from './information-block/information-block.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { InformationBlockComponent } from './information-block/information-block
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
