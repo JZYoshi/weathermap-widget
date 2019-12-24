@@ -1,3 +1,8 @@
 mat-chip {
     cursor: pointer;
 }
+
+mat-chip-list {
+    display: table-cell;
+    vertical-align: middle;
+}

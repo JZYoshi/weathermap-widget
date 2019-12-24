@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatChipsModule } from '@angular/material/chips';
     BrowserAnimationsModule,
     MatGridListModule,
     MatToolbarModule,
-    MatChipsModule
+    MatChipsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
