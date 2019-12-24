@@ -1,6 +1,5 @@
-
-<div *ngFor="let category of categories">
-    <button (click)="categoryChosen.emit(category)" >
+<mat-chip-list>
+    <mat-chip *ngFor="let category of categories" (click)="categoryChosen.emit(category)">
         {{ category }}
-    </button>
-</div>
+    </mat-chip>
+</mat-chip-list>

@@ -1,2 +1,15 @@
+<mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1"
+        [style.background]="'lightpink'">
+        <app-category-list (categoryChosen)="showInfo($event)"></app-category-list>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="3">
+        <app-information-block></app-information-block>
+    </mat-grid-tile>
+</mat-grid-list>
 <app-category-list (categoryChosen)="showInfo($event)"></app-category-list>
 <app-information-block></app-information-block>

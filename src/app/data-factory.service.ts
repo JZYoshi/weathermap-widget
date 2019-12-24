@@ -23,7 +23,7 @@ export class DataFactoryService {
     }
     const options = {
       headers: {
-        Authorization: 'Bearer ' + '5dfbd4b067368a000b6e32d6|d0340ec018d829947f509916969c15a6',
+        Authorization: 'Bearer ' + '5dfbd4b067368a000b6e32d6|1fb9c32086a15e0fc528aefd9f92c99c',
       }
     };
     this.http.get<any>('https://api.netatmo.com/api/getpublicdata' + query, options)

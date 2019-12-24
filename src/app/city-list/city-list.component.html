@@ -1,6 +1,7 @@
-<h3>cities</h3>
-<div *ngFor="let city of cities">
-    <button (click)="getWeatherData(city)">
-        {{ city.name }}
-    </button>
-</div>
+<mat-toolbar color="accent">
+    <mat-toolbar-row *ngFor="let city of cities">
+        <span (click)="getWeatherData(city)">
+            {{ city.name }}
+        </span>
+    </mat-toolbar-row>
+</mat-toolbar>
