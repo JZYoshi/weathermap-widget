@@ -7,10 +7,11 @@ import { WeatherDisplayPanelComponent } from './weather-display-panel/weather-di
 import { CategoryListComponent } from './category-list/category-list.component';
 import { InformationBlockComponent } from './information-block/information-block.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatGridListModule,
     MatToolbarModule,
     MatChipsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

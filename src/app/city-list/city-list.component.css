@@ -8,3 +8,8 @@ mat-toolbar {
     background-color: white;
     color: black;
 }
+
+#city_list_container {
+    height: 100%;
+    width: 100%;
+}

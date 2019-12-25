@@ -1,16 +1,34 @@
-<table>
-    <thead>
-        <tr>
-            <th *ngFor="let infoType of infoTypes" scope="col">
-                {{ infoType }}
-            </th>
-        </tr>
-    </thead>
-    <tbody *ngIf="!!weatherData[category]">
-        <tr>
-            <td *ngFor="let infoType of infoTypes">
+<div id="information_container">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let infoType of infoTypesWithoutSpace" scope="col">
+                    {{ infoType }}
+                </th>
+            </tr>
+        </thead>
+        <tbody *ngIf="!!weatherData[category]">
+            <tr>
+                <td *ngFor="let infoType of infoTypes">
+                    {{ weatherData[category][infoType] }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <div id="information_container">
+    <div *ngIf="!!weatherData[category]" fxLayout fxLayoutGap="10px" id="cardcase">
+        <mat-card *ngFor="let infoType of infoTypes">
+            <mat-card-header>
+              <mat-card-title>{{ infoType }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
                 {{ weatherData[category][infoType] }}
-            </td>
-        </tr>
-    </tbody>
-</table>
+              </p>
+            </mat-card-content>
+          </mat-card>
+          
+    </div>
+</div> -->

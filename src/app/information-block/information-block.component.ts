@@ -11,6 +11,7 @@ export class InformationBlockComponent implements OnInit {
   weatherData = {};
   category = '';
   infoTypes = [];
+  infoTypesWithoutSpace = [];
 
   constructor(private dataFactory: DataFactoryService) {
     this.dataFactory.weatherDataSubject.subscribe({
@@ -29,5 +30,6 @@ export class InformationBlockComponent implements OnInit {
   changeDisplayCategory(category: string) {
     this.category = category;
     this.infoTypes = Object.keys(this.weatherData[category]);
+    this.infoTypesWithoutSpace = this.infoTypes.map(e => e.replace(/_/g, ' '));
   }
 }

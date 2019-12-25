@@ -1,12 +1,4 @@
-#categoryList {
-    background-color: powderblue;
-    height: 20%;
+#panel_container {
+    height: 100%;
     width: 100%;
-    display: table;
-    text-align: center;
-}
-
-#informationBlock {
-    width: 100%;
-    background-color: burlywood;
 }

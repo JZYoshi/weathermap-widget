@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataFactoryService } from './data-factory.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weathermap-widget';
+
+  constructor(private dataFactory: DataFactoryService) {
+  }
 }

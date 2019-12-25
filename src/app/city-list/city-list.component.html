@@ -1,7 +1,9 @@
-<mat-toolbar>
-    <mat-toolbar-row *ngFor="let city of cities" (click)="getWeatherData(city)">
-        <span>
-            {{ city.name }}
-        </span>
-    </mat-toolbar-row>
-</mat-toolbar>
+<div id="city_list_container">
+    <mat-toolbar>
+        <mat-toolbar-row *ngFor="let city of cities" (click)="getWeatherData(city)">
+            <span>
+                {{ city.name }}
+            </span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

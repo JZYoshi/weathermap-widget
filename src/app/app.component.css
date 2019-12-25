@@ -2,7 +2,7 @@
     display: table;
     height: 20%;
     width: 100%;
-    background-color: #b0e0e6;
+    background-color: #4ba6e2c7;
     text-align: center;
 }
 
@@ -19,4 +19,9 @@
 #content {
     height: 40%;
     width: 100%;
+}
+
+#spinner_container {
+    padding-left: 30%;
+    padding-top: 5%;
 }
