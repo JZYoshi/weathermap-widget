@@ -25,3 +25,7 @@
     padding-left: 30%;
     padding-top: 5%;
 }
+
+#spinner_container::ng-deep mat-spinner circle {
+    stroke: #4ba6e2c7;
+}

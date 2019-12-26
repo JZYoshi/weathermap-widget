@@ -1,6 +1,6 @@
 mat-toolbar-row:hover {
     cursor: pointer;
-    background-color: rosybrown;
+    background-color: rgba(219, 181, 13, 0.938);
 }
 
 mat-toolbar {
